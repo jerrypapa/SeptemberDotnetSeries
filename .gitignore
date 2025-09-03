@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/SeptemberDotnetSeries/CopilotIndices/17.13.441.19478
+/.vs/SeptemberDotnetSeries/FileContentIndex
+/.vs/SeptemberDotnetSeries/v17
+/.vs
+/bin/Debug/net9.0
+/obj
