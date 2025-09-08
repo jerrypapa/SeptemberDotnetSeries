@@ -241,6 +241,131 @@ It should Console Print: Thank you {customer’s full names} for purchasing with
 
 
 
+TUPLE RETURN TYPES;
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProjectOne
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Get the user's details
+
+            
+//Console.WriteLine
+("Enter Your First Name:");
+            //string firstName = Console.ReadLine();
+
+            
+//Console.WriteLine
+("Enter your Last Name:");
+            //string lastName = Console.ReadLine();
+
+            ////Get the products and their prices
+
+            
+//Console.WriteLine
+("Enter First Product ");
+            //string firstProduct = Console.ReadLine();
+
+            
+//Console.WriteLine
+("Enter the price of the product");
+            //double firstProductPrice = Convert.ToDouble(Console.ReadLine());
+
+
+            
+//Console.WriteLine
+("Enter Second Product");
+            //string secondProduct = Console.ReadLine();
+
+            
+//Console.WriteLine
+("Enter the price of the product");
+            //double secondProductPrice = Convert.ToDouble(Console.ReadLine());
+
+
+
+            //string fullName = $" {firstName} {lastName} ";
+
+            //double sum = (firstProductPrice + secondProductPrice);
+
+
+
+            
+//Console.WriteLine
+($"Thank you {fullName} for purchasing with us . Your total cost for the 2 products is Ksh {sum}");
+            
+            var result = ReturnEarnedWage();
+
+            var earnedWage = result.Item2;
+
+            Console.WriteLine(result.Item1);
+        }
+
+        public static (string, decimal) ReturnEarnedWage()
+
+        {
+            try
+            {
+                int Day = 
+DateTime.Now.Day
+;
+
+                string Active = "Active";
+
+                string Terminated = "Terminated";
+
+                Console.WriteLine("Enter your name:");
+                string name = Console.ReadLine();
+
+                Console.WriteLine("Enter your employee number:");
+                string empNumber = Console.ReadLine();
+
+                Console.WriteLine("Enter your NetPay:");
+                decimal netPay = Convert.ToDecimal(Console.ReadLine());
+
+                Console.WriteLine("What is your status? (Active/Terminated)");
+                string status = Console.ReadLine();
+
+                decimal EarnedWages = (netPay / 30) * Day;
+                var message = string.Empty;
+
+                if (status == Active)
+                {
+                    message = $"Hello {name} with employee number {empNumber}, your earned wage is Ksh {EarnedWages}";
+
+                }
+                else if (status == Terminated)
+                {
+                    message = $" {name} with employee number {empNumber}, has been terminated. Please contact HR for more information";
+
+                }
+                return (message, EarnedWages);
+            }
+            catch (Exception error)
+            {
+                return ($"An error occurred: {error.Message}", 0);
+                //throw;
+            }
+
+        }
+    }
+} 
+
+
+
+
+
+
 
 
 
