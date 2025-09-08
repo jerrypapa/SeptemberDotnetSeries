@@ -238,6 +238,81 @@ It should Console Print: Thank you {customer’s full names} for purchasing with
 
 
 
+Methods .......06092025
+
+
+
+Methods
+
+--Enhances re-usability across our programs/codes.
+
+--Method parameters -- The inputs
+--Return Type -- could be of various data types (String,decimal,integer,doubles,floats,bool) or ,object,Void
+
+--Access modifier of a method : public ,static 
+
+--Syntax
+
+Access modifier ....> Return Type ...> Name of the method ...>Parameters/Arguments
+
+public void IsWantam(int voterCount,int ganneredVotes,decimal threshHold)
+
+{
+    var percentageGained = (ganneredVotes/voterCount)*100
+
+
+if(percentageGained < 50)
+{
+  return true;
+}
+else {
+return false;
+}
+
+
+
+
+if(percentageGained < 50)
+    return true;
+return false;
+
+return (percentageGained < 50)?true:false;
+
+
+
+    
+   
+}
+
+
+
+
+
+....Create solution
+...Create Projects (can be ot types : console apps,class libraries, APIS)
+...namespaces 
+..Classes
+..Methods , fields ..datatypes
+
+
+...........Exercise .............
+
+Build a console app;
+
+1.Takes an employeeName
+2.Take an employee Number
+3.Take an employee NetPay
+4.An employee status (active,terminated)
+
+//assume 30 calendar days
+
+Acceptance criteria
+
+//As an active employee I want to know the earned wage amount I'm eligble for today
+//As a terminated employee I want to be denied access to my wages
+
+
+
 
 
 

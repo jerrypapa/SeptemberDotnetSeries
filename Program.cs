@@ -3,11 +3,19 @@ internal class Program
 {
     static void Main(string[] args)
     {
+
+        MyDotNetMethods myMethods = new MyDotNetMethods();
+
+        var result= myMethods.IsWantam(20000000, 11000000);
+
+        //The above creates an instance of MyDotNetMethods class
+
+
         // type variablename = value;
         int number = 10;
 
-        string FullName = "John Duran";
-        bool isWorking = true;
+        var FullName = "John Duran";
+        var isWorking = true;
 
 
         Console.WriteLine("Hello, World!");
@@ -84,3 +92,6 @@ internal class Program
         Console.WriteLine(myInt);      // Outputs 9
     }
 }
+
+
+
