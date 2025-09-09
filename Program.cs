@@ -3,19 +3,25 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        AdvancedmethodReturnTypes advancedmethodReturnTypes = new ();
+        var result= advancedmethodReturnTypes.ReturnEarnedWage();
 
-        MyDotNetMethods myMethods = new MyDotNetMethods();
+       // result.
 
-        var result= myMethods.IsWantam(20000000, 11000000);
+        // Person y = new Person("John", "Duran");
 
-        //The above creates an instance of MyDotNetMethods class
+        //MyDotNetMethods myMethods = new MyDotNetMethods();
+
+        //var result= myMethods.IsWantam(20000000, 11000000);
+
+        ////The above creates an instance of MyDotNetMethods class
 
 
-        // type variablename = value;
-        int number = 10;
+        //// type variablename = value;
+        //int number = 10;
 
-        var FullName = "John Duran";
-        var isWorking = true;
+        //var FullName = "John Duran";
+        //var isWorking = true;
 
 
         Console.WriteLine("Hello, World!");

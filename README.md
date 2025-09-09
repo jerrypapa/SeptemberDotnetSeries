@@ -438,6 +438,112 @@ DateTime.Now.Day
 
 
 
+......................................LESSON 09092025......................................................
+
+
+
+
+Immutable , mutable
+Void,
+Tuples
+Return types (INT,STRING,DECIMAL...ETC)
+
+Objects (classes,records,structs)
+
+
+Reference Type -- (lives in a heap)
+Value Type    ---  (stored in a stack)   ..Immutable
+
+
+Class is a reference type -- when you return a class/a reference type as a method's return type you will only get its referenece nd not its copy.
+
+A struct is a value type -- when its returned its normally copied and not referenced 
+
+
+Records -- introduced in c# 9 + 
+
+They are reference types just like classes are but they support immutability  just as value types do. Ideal for DTOS, results
+
+-There are also record structs (value type records)
+
+dto  --> Data transfer object
+
+...........................................
+
+Instantiation of an object (has a wide category..ideally everything in C#)
+
+instantiating means creating a new instance of an object;
+example is we wanted to instantiate a class we would use the new key word..
+
+public class Person{}
+
+Person p = new Person{}
+
+
+
+string FirstName = "Wafula"
+
+string Greetings = FirstName
+
+FirstName += " Sasa"
+
+Console.WriteLine(FirstName); //Wafula Sasa
+Console.WriteLine(Greetings); //Wafula
+
+
+  public dynamic GetPerson()
+  {
+      return new Person("John", "Duran");
+  }
+
+public object GetPerson()
+  {
+      return new Person("John", "Duran");
+  }
+
+
+public Person GetPerson()
+  {
+      return new Person("John", "Duran");
+  }
+
+
+
+
+
+---------------------------TASK 09092025...................
+
+
+
+A SIMPLE CAR YARD CONSOLE APP;
+
+Please select your desired Brand;
+1.Toyota
+2.Nissan
+
+  It will then list minimum two options from the selected brand
+
+If I selected option 1
+
+then my next select list will have ;
+
+1.Vanguard
+2.Premio
+
+I then select any of the 2 options then I should be able to get the market price,year of manufacture, units available;
+
+Its should read (The market price for blah blah is .....and blah blah units are in store....all models are of year ...blah blah)
+
+
+......................................
+
+Acceptance criteria..
+
+Build atleast 4 methods that will return prices for the options available...
+Where possible, Leverage records,structs as request/response types
+
+
+
 
 
 
