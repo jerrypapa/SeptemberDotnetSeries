@@ -3,10 +3,74 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        AdvancedmethodReturnTypes advancedmethodReturnTypes = new ();
-        var result= advancedmethodReturnTypes.ReturnEarnedWage();
+        MyswitchMethod();
 
-       // result.
+
+        decimal balance = 1000; 
+        string choice = string.Empty;
+
+        while (choice != "exit")
+        {
+            Console.WriteLine($"Your available Balance is: {balance}");
+            Console.WriteLine($"Enter  'withdraw', 'deposit', 'exit' :");
+            choice = Console.ReadLine().ToLower(); //ExIT   exit
+
+            if(choice == "withdraw")
+            {
+
+                //Conversion of decimals back to int .....
+
+                var testDecimal1 = 655.40m;
+                var testDecimal2 = 655.50m;
+                var testDecimal3 = 655.55m;
+                var testDecimal4 = 655.6m;
+
+
+                var testInt1 = (int)testDecimal1; //655.5
+                var testInt2 = (int)testDecimal2; //655
+                var testInt3 = (int)testDecimal3; //655
+                var testInt4 = (int)testDecimal4; //655
+
+
+                Console.WriteLine("Enter the amount to withdraw"); // 655
+                var readValue = Console.ReadLine();
+                decimal convertedAmount = decimal.Parse(readValue);
+
+                if(convertedAmount > balance)
+                    Console.WriteLine("Insufficient funds.");
+
+
+                balance -= convertedAmount; 
+
+
+                //   var convertedAmount = decimal.TryParse(Console.ReadLine(), out decimal amount);
+
+            } else if(choice == "deposit")
+            {
+                Console.WriteLine("Enter the amount to deposit");
+                decimal convertedAmount = decimal.Parse(Console.ReadLine());
+                if (convertedAmount <=50)
+                    Console.WriteLine("Invalid Amount allowed");
+                balance += convertedAmount;
+            }
+
+
+        }
+
+
+
+
+        //Operattors;       ++  += --  -=   *=   /=   %=
+
+
+
+
+
+
+        //AdvancedmethodReturnTypes advancedmethodReturnTypes = new ();
+        //var result= advancedmethodReturnTypes.ReturnEarnedWage();
+
+        // result.
 
         // Person y = new Person("John", "Duran");
 
@@ -24,8 +88,38 @@ internal class Program
         //var isWorking = true;
 
 
-        Console.WriteLine("Hello, World!");
+       // Console.WriteLine("Hello, World!");
     }
+
+
+    static void MyswitchMethod()
+    {
+       Console.WriteLine("Enter your letter grade (A,B,C,D,E,F):");
+       var grade = Console.ReadLine().ToUpper();
+
+        switch (grade)
+        {
+            case "A":
+                Console.WriteLine("Excellent!");
+                break;
+            case "B":
+                Console.WriteLine("Well done");
+                break;
+            case "C":
+                Console.WriteLine("Good");
+                break;
+            case "D":
+                Console.WriteLine("You passed");
+                break;
+            case "F":
+                Console.WriteLine("Better try again");
+                break;
+            default:
+                Console.Write("See University Senate!");
+                Console.ReadLine();
+                break;
+        }
+    }   
 
     static void ReturnFullNames()
     {
@@ -74,11 +168,7 @@ internal class Program
     }
     public static void AreaOfCircle()
     {
-        double radius, area;
-        const double pi = 3.14159;
-        radius = 5.0;
-        area = pi * radius * radius;
-        Console.WriteLine("The area of the circle is: " + area);
+
     }
     static void ImplicitConverter()
     {

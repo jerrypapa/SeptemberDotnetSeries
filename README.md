@@ -548,5 +548,89 @@ Where possible, Leverage records,structs as request/response types
 
 
 
+--------------------------------------------------------LESSON 09132025..............................
+
+If statements ...If else...
+
+
+1.While Loops
+2.Switch statements
+
+
+
+
+1.While Loops ;
+
+---> The concept of washing dishes...while there are dirty utensils, keep washing; when no more dirty utensils exist, stop washing..
+
+--> A while loop will repeat a block of code as long as a given condition is true;
+
+Syntax;
+
+while (a given condition is true)
+
+{
+   //Do something
+   //You have to ensure you eventually change that condition
+}
+
+//Infinite loops; Always make sure the condition can become false otherwise your program will never terminate // will run forever
+int count 77
+
+count ++
+
+int count = 1;
+
+while (count <=5)
+
+{
+   Console.WriteLine($"Count: {count}");
+   count ++; //Increments Value by 1
+}
+
+
+//Count: 1, Count: 2,Count: 3,Count: 4,Count: 5
+
+
+
+
+SWITCH statements
+
+Think of the TV remote analogy
+
+Syntax
+
+switch (some variable)
+
+{
+   case value1:
+        //Do something
+        break;
+  case value2:
+        //Do something
+        break;
+
+ default:
+        //Do something if maybe case 1 and 2 dont match
+        break;
+
+}
+
+
+
+lETS Build a calculator using switch concept
+
+Acceptance criteria
+Accepts firstnumber
+Accepts operator   (+,-,*,/)
+Accepts Second number
+Returns a result
+
+
+
+
+
+
+
 
 
